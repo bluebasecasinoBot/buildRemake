@@ -137,16 +137,16 @@ __SYD.pageNav__btn__sec1 = () =>{
             __SYD.ul_lists_el({child:__SYD.pTag({text:"Save Agent" , class_:"navClick btns_style" , style:"font-size:16px;font-weight:700;pointer-events:auto;"}) , function_:{
                 onclick:() =>{
 
-                    // if(Object.keys(__p(['createAI__sections_main','userInfo'])).every(val =>{return __p(['createAI__sections_main','userInfo'])[val].length > 0}))
-                    // {
+                    if(Object.keys(__p(['createAI__sections_main','userInfo'])).every(val =>{return __p(['createAI__sections_main','userInfo'])[val].length > 0}))
+                    {
                         __p(["popUp" , "displayText"])("Agent customisation complete ✅");
 
                         __p(["createAI__sections_main" , "display_section_2"])();
 
-                    // }else 
-                    // {
-                    //     __p(["popUp" , "displayText"])("Please complete the customisation form 😢" , "warn");
-                    // }
+                    }else 
+                    {
+                        __p(["popUp" , "displayText"])("Please complete the customisation form 😢" , "warn");
+                    }
 
                 }
             }}),
